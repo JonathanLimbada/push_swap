@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   baesick.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/05 13:12:02 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/10 16:34:41 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/07/10 16:09:42 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/07/15 13:08:39 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-
-typedef struct		s_struct
+int	y33t(char **argv)
 {
-	int				value;
-	struct s_struct	*next;
-	struct s_struct *prev;
-}					t_list;
+	int	i;
 
-#endif
+	i = 0;
+	while (argv[i])
+	{
+		if (ft_isdigit(argv[i]) != 0 || argv[i] == '-')
+		{
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+}
+
+
+
