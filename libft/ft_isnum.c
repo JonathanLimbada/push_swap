@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/05 12:37:31 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/18 16:45:38 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/07/16 10:58:57 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/07/17 09:02:21 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	is_lit(int argc, char **argv)
+int	ft_isnum(char *str)
 {
-	y33t(argc, argv);
-	doppel(argc, argv);
-	big_oof(argc, argv);
-}
+	int		i;
 
-int		main(int argc, char **argv)
-{
-	if (argc < 2)
-		return (0);
-	is_lit(argc, argv);
-
+	i = 0;
+	while (str[i])
+	{
+		if (!((str[i] >= 48 && str[i] <= 57) || str[i] == 45))
+			return (0);
+		i++;
+	}
+	return (1);
 }

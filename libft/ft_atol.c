@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 17:10:03 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/17 09:02:34 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/07/17 08:59:06 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/07/17 09:15:49 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-**ft_atoi converts the initial portion of the string pointed to
-**by str to int representation.
-*/
-
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
 	int		i;
 	long	nbr;
@@ -39,5 +34,5 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	nbr *= neg;
-	return (int)(nbr);
+	return (nbr);
 }

@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 13:12:02 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/15 15:51:20 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/18 16:30:45 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ typedef struct		s_struct
 {
 	int				value;
 	struct s_struct	*next;
-	struct s_struct *prev;
 }					t_pose;
 
+void	big_oof(int argc, char **argv);
 void	oof(void);
 void	y33t(int argc, char **argv);
 void	doppel(int argc, char **argv);

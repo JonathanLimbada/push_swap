@@ -6,7 +6,7 @@
 #    By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 09:54:42 by jlimbada          #+#    #+#              #
-#    Updated: 2019/06/21 13:58:42 by jlimbada         ###   ########.fr        #
+#    Updated: 2019/07/17 09:17:37 by jlimbada         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 FLAG = -Wall -Werror -Wextra
 OBJECT = *.o
 SOURCE = ft_atoi.c \
+		 ft_atol.c \
 		 ft_bzero.c \
 		 ft_isalnum.c \
 		 ft_isalpha.c \
@@ -22,6 +23,7 @@ SOURCE = ft_atoi.c \
 		 ft_isprint.c \
 		 ft_isupper.c \
 		 ft_islower.c \
+		 ft_isnum.c \
 		 ft_isspace.c \
 		 ft_itoa.c \
 		 ft_memalloc.c \

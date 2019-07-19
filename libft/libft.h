@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 12:35:14 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/06/21 14:33:00 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/17 09:17:14 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,10 +106,12 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 ** Extra
 */
 
+long				ft_atol(const char *str);
 int					ft_intlen(int n);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_isspace(int c);
+int					ft_isnum(char *str);
 char				*ft_strndup(const char *s1, size_t n);
 
 #endif
