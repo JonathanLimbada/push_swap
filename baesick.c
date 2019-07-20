@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:09:42 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/18 12:48:00 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/20 16:35:36 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,34 @@ void	oof(void)
 	exit(1);
 }
 
-void	y33t(int argc, char **argv)
+void	y33t(int count, int argc, char **argv)
 {
 	int	j;
 
 	j = 1;
-	while (j < argc)
+	if (argc == 2)
 	{
-		if (ft_isnum(argv[j]) == 0)
-			oof();
-		j++;
+		j = 0;
+		while (j < count)
+		{
+			if (ft_isnum(argv[j]) == 0)
+				oof();
+			j++;
+		}
+
+	}
+	else
+	{
+		while (j < argc)
+		{
+			if (ft_isnum(argv[j]) == 0)
+				oof();
+			j++;
+		}
 	}
 }
 
-void	doppel(int argc, char **argv)
+void	doppel(int count, int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -51,6 +65,7 @@ void	doppel(int argc, char **argv)
 		while (j < argc)
 		{
 			if (args[i] == args[j])
+				free(args);
 				oof();
 			j++;
 		}
@@ -59,7 +74,7 @@ void	doppel(int argc, char **argv)
 	free(args);
 }
 
-void	big_oof(int argc, char **argv)
+void	big_oof(int count, int argc, char **argv)
 {
 	int		i;
 	int		j;
@@ -76,7 +91,10 @@ void	big_oof(int argc, char **argv)
 	while ( i < argc - 1)
 	{
 		if (args[i] > 2147483647 || args[i] < -2147483648)
+		{
+			free(args);
 			oof();
+		}
 		i++;
 	}
 	free(args);

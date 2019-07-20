@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   baesick2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/05 12:37:31 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/20 15:49:05 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/07/20 12:12:05 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/07/20 15:25:15 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	is_lit(int count, int argc, char **argv)
+t_pose	*split_time(int argc, char **argv)
 {
-	y33t(count, argc, argv);
-	doppel(count, argc, argv);
-	big_oof(count, argc, argv);
+	char	**arg;
+	int		i;
+
+	i = 0;
+	arg = ft_strsplit(str, ' ');
+	is_lit(arg_size(arg), argc, **argv);
+	while (arg[i] != '\0')
+	{
+		free(arg[i]);
+		i++;
+	}
+	free(arg);
 }
 
-int		main(int argc, char **argv)
+int		arg_size(char **arg)
 {
+	int		i;
 
-	if (argc < 2)
-		return (0);
-	if (argc == 2)
-		split_time(argc, **argv);
-	else
-		is_lit(argc, argc, argv);
+	i = 0;
+	while (array[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
