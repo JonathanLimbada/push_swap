@@ -1,52 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   baesick.c                                          :+:      :+:    :+:   */
+/*   baysick.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/10 16:09:42 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/22 13:21:47 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/07/22 10:20:51 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/07/22 13:39:56 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	oof(void)
+void	free_time(char **argv)
 {
-	ft_putendl("Error");
-	exit(1);
+	int	i;
+
+	i = 0;
+	while (argv[i] != '\0')
+	{
+		free(argv[i]);
+		i++;
+	}
+	free(argv);
 }
 
-void	y33t(int argc, char **argv)
+void	y22t(int argc, char **argv)
 {
 	int	j;
 
-	j = 1;
+	j = 0;
 	while (j < argc)
 	{
 		if (ft_isnum(argv[j]) == 0)
+		{
+			free_time(argv);
 			oof();
+		}
 		j++;
 	}
 }
 
-
-void	doppel(int argc, char **argv)
+void	d2pp2l(int argc, char **argv)
 {
 	int	i;
 	int	j;
 	int	*args;
 
-	i = 1;
-	args = (int*)malloc((argc - 1) * sizeof(int));
+	i = 0;
+	args = (int*)malloc((argc) * sizeof(int));
 	while (i < argc)
 	{
-		args[i - 1] = ft_atoi(argv[i]);
+		args[i] = ft_atoi(argv[i]);
 		i++;
 	}
 	i = 0;
-	while (i < argc - 1)
+	while (i < argc)
 	{
 		j = i + 1;
 		while (j < argc)
@@ -54,6 +63,7 @@ void	doppel(int argc, char **argv)
 			if (args[i] == args[j])
 			{
 				free(args);
+				free_time(argv);
 				oof();
 			}
 			j++;
@@ -63,24 +73,24 @@ void	doppel(int argc, char **argv)
 	free(args);
 }
 
-void	big_oof(int argc, char **argv)
+void	big_twoof(int argc, char **argv)
 {
 	int		i;
-	int		j;
 	long	*args;
 
-	i = 1;
-	args = (long*)malloc((argc - 1) * sizeof(long));
+	i = 0;
+	args = (long*)malloc((argc) * sizeof(long));
 	while (i < argc)
 	{
-		args[i - 1] = ft_atol(argv[i]);
+		args[i] = ft_atol(argv[i]);
 		i++;
 	}
 	i = 0;
-	while ( i < argc - 1)
+	while ( i < argc)
 	{
 		if (args[i] > 2147483647 || args[i] < -2147483648)
 		{
+			free_time(argv);
 			free(args);
 			oof();
 		}
