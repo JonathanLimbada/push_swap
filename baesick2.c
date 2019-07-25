@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 12:12:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/22 13:53:55 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/25 10:16:22 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	split_time(int argc, char **argv)
 	int		i;
 
 	i = 0;
-	arg = ft_cd_strsplit(argv[1], ' ');
+	arg = ft_strsplit(argv[1], ' ');
 	is_lit(arg_size(arg), argc, arg);
 	free_time(arg);
 }

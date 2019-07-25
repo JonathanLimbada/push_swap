@@ -6,7 +6,7 @@
 #    By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 09:54:42 by jlimbada          #+#    #+#              #
-#    Updated: 2019/07/22 13:31:56 by jlimbada         ###   ########.fr        #
+#    Updated: 2019/07/25 10:19:20 by jlimbada         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,6 @@ SOURCE = ft_atoi.c \
 		 ft_strstr.c \
 		 ft_strsub.c \
 		 ft_strsplit.c \
-		 ft_cd_strsplit.c \
 		 ft_intlen.c \
 		 ft_strtrim.c \
 		 ft_toupper.c \

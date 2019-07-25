@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 12:35:14 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/22 13:31:38 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/25 10:18:45 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,5 @@ int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isnum(char *str);
 char				*ft_strndup(const char *s1, size_t n);
-char				**ft_cd_strsplit(char const *s, char c);
 
 #endif
