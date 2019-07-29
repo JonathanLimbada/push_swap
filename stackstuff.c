@@ -6,24 +6,31 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 12:06:16 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/25 16:55:14 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/26 10:20:36 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_pose	*listint(int argc, char **argv)
+t_pose	*listint(int count, int argc, char **argv)
 {
 	t_pose	*stackA;
 	int	i;
 
 	i = 1;
+	if (argc == 2)
+	{
+		i = 0;
+		argc = count;
+	}
 	stackA = head_time(ft_atoi(argv[i]));
+	i++;;
 	while (i < argc)
 	{
-		tail_time(stackA, head_time(argv[i]));
+		tail_time(&stackA, head_time(ft_atoi(argv[i])));
 		i++;
 	}
+	return (stackA);
 }
 
 t_pose	*head_time(int value)
@@ -45,7 +52,7 @@ void	tail_time(t_pose **head, t_pose *node)
 	t_pose	*temp;
 
 	if(!(head) || (!(node)))
-		return (0);
+		return ;
 	temp = *head;
 	if (temp)
 	{

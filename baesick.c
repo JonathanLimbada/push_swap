@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:09:42 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/22 13:21:47 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/07/26 12:28:34 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ void	doppel(int argc, char **argv)
 void	big_oof(int argc, char **argv)
 {
 	int		i;
-	int		j;
 	long	*args;
 
 	i = 1;
