@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   baesick2.c                                         :+:      :+:    :+:   */
+/*   splits.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 12:12:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/26 09:59:13 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/15 16:14:30 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_pose	*split_time(int argc, char **argv)
 
 	i = 0;
 	arg = ft_strsplit(argv[1], ' ');
-	is_lit(arg_size(arg), argc, arg);
+	errors(arg_size(arg), argc, arg);
 	stack = listint(arg_size(arg), argc, arg);
 	free_time(arg);
 	return (stack);

@@ -6,16 +6,17 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 12:06:16 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/26 10:20:36 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/15 16:15:18 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_pose	*listint(int count, int argc, char **argv)
+t_pose		*listint(int count, int argc, char **argv)
 {
-	t_pose	*stackA;
-	int	i;
+	t_pose	*stacka;
+	t_pose	*node;
+	int		i;
 
 	i = 1;
 	if (argc == 2)
@@ -23,17 +24,40 @@ t_pose	*listint(int count, int argc, char **argv)
 		i = 0;
 		argc = count;
 	}
-	stackA = head_time(ft_atoi(argv[i]));
-	i++;;
+	stacka = makelist(ft_atoi(argv[i]));
+	i++;
 	while (i < argc)
 	{
-		tail_time(&stackA, head_time(ft_atoi(argv[i])));
+		node = makelist(ft_atoi(argv[i]));
+		tail_time(&stacka, node);
 		i++;
 	}
-	return (stackA);
+	return (stacka);
 }
 
-t_pose	*head_time(int value)
+void		head_time(t_pose **head, t_pose *node)
+{
+	t_pose	*temp;
+
+	if (!(head) || !(node))
+		return ;
+	temp = *head;
+	if (temp)
+	{
+		temp->previous = node;
+		node->next = *head;
+		node->previous = NULL;
+		*head = node;
+	}
+	else
+	{
+		node->next = NULL;
+		node->previous = NULL;
+		*head = node;
+	}
+}
+
+t_pose		*makelist(int value)
 {
 	t_pose	*stack;
 
@@ -47,11 +71,11 @@ t_pose	*head_time(int value)
 	return (stack);
 }
 
-void	tail_time(t_pose **head, t_pose *node)
+void		tail_time(t_pose **head, t_pose *node)
 {
 	t_pose	*temp;
 
-	if(!(head) || (!(node)))
+	if (!(head) || (!(node)))
 		return ;
 	temp = *head;
 	if (temp)

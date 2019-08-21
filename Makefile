@@ -6,9 +6,9 @@ SRC_DIR = ./
 FLAGS = -Wall -Werror -Wextra -g
 INCLUDES = ./includes/
 OPTIONS = -I. -I./libft -lft -L./libft
-SRC_COMMON += $(SRC_DIR)stackstuff.c
-SRC_COMMON += $(SRC_DIR)baesick.c $(SRC_DIR)baysick.c
-SRC_COMMON += $(SRC_DIR)splits.c
+SRC_COMMON += $(SRC_DIR)stackstuff.c $(SRC_DIR)revrot.c $(SRC_DIR)read.c
+SRC_COMMON += $(SRC_DIR)basic_tests2.c $(SRC_DIR)basic_tests.c $(SRC_DIR)swapush.c
+SRC_COMMON += $(SRC_DIR)splits.c $(SRC_DIR)rot.c $(SRC_DIR)algo.c $(SRC_DIR)checks.c
 SRC_CH = $(SRC_DIR)checker.c $(SRC_COMMON)
 SRC_PS = $(SRC_DIR)push_swap.c $(SRC_COMMON)
 
@@ -23,8 +23,7 @@ $(NAME_CH):
 	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
 
 $(NAME_PS):
-	@echo "$(NAME_PS) notready"
-#	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
+	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
 
 clean:
 	@echo "clean TODO"
