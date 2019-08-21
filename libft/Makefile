@@ -6,7 +6,7 @@
 #    By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/21 09:54:42 by jlimbada          #+#    #+#              #
-#    Updated: 2019/07/25 10:19:20 by jlimbada         ###   ########.fr        #
+#    Updated: 2019/08/12 11:29:05 by jlimbada         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,8 @@ SOURCE = ft_atoi.c \
 		 ft_lstdel.c \
 		 ft_lstadd.c \
 		 ft_lstiter.c \
-		 ft_lstmap.c 
+		 ft_lstmap.c \
+		 get_next_line.c
 OPTIONS = -c -I.
 
 all: $(NAME)

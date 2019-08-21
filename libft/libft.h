@@ -6,7 +6,7 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 12:35:14 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/07/25 10:18:45 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/12 09:23:20 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define INTMAX 2147483647
 # define INTMIN -2147483647
 # define MININT "-2147483648"
+# define BUFF_SIZE 32
 
 /*
 ** Part 1
@@ -113,5 +114,6 @@ int					ft_islower(int c);
 int					ft_isspace(int c);
 int					ft_isnum(char *str);
 char				*ft_strndup(const char *s1, size_t n);
+int					get_next_line(const int fd, char **line);
 
 #endif
