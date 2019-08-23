@@ -6,11 +6,12 @@
 /*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 12:33:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/19 10:14:38 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/22 21:02:01 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 void	two(t_pose **stacka)
 {
@@ -41,4 +42,40 @@ void	three(t_pose **stacka)
 		rra(stacka, 1);
 	else if (one > two && one > three && two < three)
 		ra(stacka, 1);
+}
+
+void	five(t_pose **stacka, t_pose **stackb, int len)
+{
+	int	s;
+	int	i;
+	
+	i = 0;
+	while (i < (len - 3))
+	{
+		s = smallest(stacka);
+		rotate_time(stacka, s, len);
+		pb(stackb, stacka, 1);
+		i++;
+	}
+	three(stacka);
+	while (i > 0)
+	{
+		pa(stacka, stackb, 1);
+		i--;
+	}
+}
+
+void	twenty(t_pose **stacka, t_pose **stackb, int len)
+{
+	int	i;
+	int	s;
+
+	i = len / 2;
+	while (i > 0)
+	{
+		s = smallest(stacka);
+		rotate_time(stacka, s, len);
+		pb(stackb, stacka, 1);
+		i--;
+	}
 }
