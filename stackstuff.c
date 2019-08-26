@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stackstuff.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 12:06:16 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/15 16:15:18 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/26 13:05:34 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ t_pose		*listint(int count, int argc, char **argv)
 		tail_time(&stacka, node);
 		i++;
 	}
+	sorting_value(&stacka);
 	return (stacka);
 }
 

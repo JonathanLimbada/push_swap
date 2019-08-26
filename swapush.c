@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swapush.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/01 12:56:30 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/22 15:00:25 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/26 13:33:36 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	pa(t_pose **stack_a, t_pose **stack_b, int push)
 	}
 }
 
-void	pb(t_pose **stack_b, t_pose **stack_a, int push)
+void	pb(t_pose **stack_a, t_pose **stack_b, int push)
 {
 	t_pose	*temp;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 14:44:18 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/22 15:27:06 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:59:30 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int			list_len(t_pose **stack)
 {
-	int	i;
-	t_pose *list;
+	int		i;
+	t_pose	*list;
 
 	i = 0;
 	list = *stack;
@@ -43,18 +43,11 @@ int			smallest(t_pose **stack)
 	return (s);
 }
 
-void	rotate_time(t_pose **stack, int p, int len)
+void		rotate_time(t_pose **stack, int p, int len)
 {
-	int	i;
-	t_pose	*node;
+	int		i;
 
-	node = *stack;
-	i = 0;
-	while (node && node->value != p)
-	{
-		node = node->next;
-		i++;
-	}
+	i = position(stack, p);
 	if (i <= (len / 2))
 	{
 		while (i > 0)
@@ -72,9 +65,9 @@ void	rotate_time(t_pose **stack, int p, int len)
 			i--;
 		}
 	}
-}	
+}
 
-void	do_pushswap(t_pose **stacka, t_pose **stackb, int len)
+void		do_pushswap(t_pose **stacka, t_pose **stackb, int len)
 {
 	if (len == 2)
 		two(stacka);
@@ -84,9 +77,11 @@ void	do_pushswap(t_pose **stacka, t_pose **stackb, int len)
 		five(stacka, stackb, len);
 	if (len > 5 && len <= 20)
 		twenty(stacka, stackb, len);
+	if (len > 20 && len <= 50)
+		fifty(stacka, stackb, len);
 }
 
-void	sorting_value(t_pose **stack)
+void		sorting_value(t_pose **stack)
 {
 	int		weight;
 	t_pose	*node;
@@ -104,6 +99,6 @@ void	sorting_value(t_pose **stack)
 				node->sort_val--;
 			fast = fast->next;
 		}
-		node = node->next;		
+		node = node->next;
 	}
 }

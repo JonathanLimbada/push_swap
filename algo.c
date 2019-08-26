@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 12:33:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/22 21:02:01 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/26 15:48:18 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	three(t_pose **stacka)
 	one = node->value;
 	two = node->next->value;
 	three = node->next->next->value;
-
 	if (one > two && two > three)
 	{
 		sa(stacka, 1);
@@ -48,7 +47,7 @@ void	five(t_pose **stacka, t_pose **stackb, int len)
 {
 	int	s;
 	int	i;
-	
+
 	i = 0;
 	while (i < (len - 3))
 	{
@@ -67,15 +66,52 @@ void	five(t_pose **stacka, t_pose **stackb, int len)
 
 void	twenty(t_pose **stacka, t_pose **stackb, int len)
 {
+	int	max;
 	int	i;
-	int	s;
 
-	i = len / 2;
-	while (i > 0)
+	i = 1;
+	max = 0;
+	while (*stacka)
 	{
-		s = smallest(stacka);
-		rotate_time(stacka, s, len);
-		pb(stackb, stacka, 1);
-		i--;
+		max += 5;
+		while (i <= max)
+		{
+			if (!(*stacka))
+				break ;
+			if ((*stacka)->sort_val <= max)
+			{
+				pb(stacka, stackb, 1);
+				i++;
+			}
+			else
+				ra(stacka, 1);
+		}
 	}
+	pa_time(stacka, stackb, len);
+}
+
+void	fifty(t_pose **stacka, t_pose **stackb, int len)
+{
+	int	max;
+	int	i;
+
+	i = 1;
+	max = 0;
+	while (*stacka)
+	{
+		max += 13;
+		while (i <= max)
+		{
+			if (!(*stacka))
+				break ;
+			if ((*stacka)->sort_val <= max)
+			{
+				pb(stacka, stackb, 1);
+				i++;
+			}
+			else
+				ra(stacka, 1);
+		}
+	}
+	pa_time(stacka, stackb, len);
 }
