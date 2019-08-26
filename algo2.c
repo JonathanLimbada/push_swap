@@ -85,3 +85,25 @@ void	do_pushswap(t_pose **stacka, t_pose **stackb, int len)
 	if (len > 5 && len <= 20)
 		twenty(stacka, stackb, len);
 }
+
+void	sorting_value(t_pose **stack)
+{
+	int		weight;
+	t_pose	*node;
+	t_pose	*fast;
+
+	node = *stack;
+	while (node)
+	{
+		weight = list_len(stack);
+		node->sort_val = weight;
+		fast = *stack;
+		while (fast)
+		{
+			if (node->value < fast->value)
+				node->sort_val--;
+			fast = fast->next;
+		}
+		node = node->next;		
+	}
+}

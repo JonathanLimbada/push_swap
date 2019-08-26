@@ -21,6 +21,7 @@
 typedef struct		s_struct
 {
 	int				value;
+	int				sort_val;
 	struct s_struct	*next;
 	struct s_struct	*previous;
 }					t_pose;
@@ -40,6 +41,7 @@ t_pose	*split_time(int argc, char **argv);
 int		arg_size(char **arg);
 int		list_len(t_pose **stack);
 int		smallest(t_pose **stack);
+void	sorting_value(t_pose **stack);
 void	rotate_time(t_pose **stack, int p, int len);
 t_pose	*listint(int count, int argc, char **argv);
 t_pose	*makelist(int value);
