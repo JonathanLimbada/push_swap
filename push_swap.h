@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 13:12:02 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/26 16:35:40 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/27 15:28:23 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,9 @@ void				five(t_pose **stacka, t_pose **stackb, int len);
 void				twenty(t_pose **stacka, t_pose **stackb, int len);
 void				fifty(t_pose **stacka, t_pose **stackb, int len);
 void				hundred(t_pose **stacka, t_pose **stackb, int len);
+void				twofifty(t_pose **stacka, t_pose **stackb, int len);
+void				five_hundred(t_pose **stacka, t_pose **stackb, int len);
+void				sort_time(t_pose **stacka, t_pose **stackb, int len);
 void				ra(t_pose **stack, int push);
 void				rb(t_pose **stack, int push);
 void				rr(t_pose **stacka, t_pose **stackb, int push);
