@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 12:33:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/26 15:48:18 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/27 13:28:53 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ void	three(t_pose **stacka)
 		sa(stacka, 1);
 		rra(stacka, 1);
 	}
+	else if (one < two && two > three && three > one)
+	{
+		rra(stacka, 1);
+		sa(stacka, 1);
+	}
 	else if (one < three && one > two && three > two)
 		sa(stacka, 1);
 	else if (one < two && two > three && one > three)
@@ -53,7 +58,7 @@ void	five(t_pose **stacka, t_pose **stackb, int len)
 	{
 		s = smallest(stacka);
 		rotate_time(stacka, s, len);
-		pb(stackb, stacka, 1);
+		pb(stacka, stackb, 1);
 		i++;
 	}
 	three(stacka);

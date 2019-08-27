@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/08 09:46:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/17 14:09:12 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/27 13:18:50 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	do_programs(t_pose **stacka, t_pose **stackb, char *str)
 	else if (ft_strequ(str, "pa"))
 		pa(stacka, stackb, 0);
 	else if (ft_strequ(str, "pb"))
-		pb(stackb, stacka, 0);
+		pb(stacka, stackb, 0);
 	else if (ft_strequ(str, "rra"))
 		rra(stacka, 0);
 	else if (ft_strequ(str, "rrb"))

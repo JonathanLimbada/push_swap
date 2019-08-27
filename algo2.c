@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 14:44:18 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/26 15:59:30 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/27 11:50:18 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ void		do_pushswap(t_pose **stacka, t_pose **stackb, int len)
 		twenty(stacka, stackb, len);
 	if (len > 20 && len <= 50)
 		fifty(stacka, stackb, len);
+	if (len > 50 && len <= 105)
+		hundred(stacka, stackb, len);
 }
 
 void		sorting_value(t_pose **stack)
