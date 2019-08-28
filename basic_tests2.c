@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   basic_tests2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:20:51 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/15 16:14:07 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/28 09:17:00 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	split_num(int argc, char **argv)
 		if (ft_isnum(argv[j]) == 0)
 		{
 			free_time(argv);
-			oof();
+			oof(1);
 		}
 		j++;
 	}
@@ -58,7 +58,7 @@ void	doubles2(int argc, char **argv)
 	while (i < argc)
 	{
 		j = i + 1;
-		while (j < argc)
+		while (j < argc - 1)
 		{
 			if (args[i] == args[j])
 				FFREE_OOF;
@@ -88,7 +88,7 @@ void	min_max2(int argc, char **argv)
 		{
 			free_time(argv);
 			free(args);
-			oof();
+			oof(3);
 		}
 		i++;
 	}

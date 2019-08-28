@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 13:12:02 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/27 15:28:23 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/28 08:17:38 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include "libft/libft.h"
 
-# define FFREE_OOF {free(args); free_time(argv); oof();}
-# define FREE_OOF {free(args); oof();}
+# define FFREE_OOF {free(args); free_time(argv); oof(2);}
+# define FREE_OOF {free(args); oof(2);}
 
 typedef struct		s_struct
 {
@@ -28,7 +28,7 @@ typedef struct		s_struct
 
 void				free_time(char **argv);
 void				min_max(int argc, char **argv);
-void				oof(void);
+void				oof(int i);
 void				is_num(int argc, char **argv);
 void				doubles(int argc, char **argv);
 void				min_max2(int argc, char **argv);

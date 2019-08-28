@@ -23,6 +23,7 @@ $(NAME_CH):
 	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_CH) -o $(NAME_CH)
 
 $(NAME_PS):
+	@echo "$(NAME_PS) compiled"
 	@$(CC) $(FLAGS) $(OPTIONS) $(SRC_PS) -o $(NAME_PS)
 
 clean:

@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 14:44:18 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/27 15:35:11 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/28 07:46:47 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void		do_pushswap(t_pose **stacka, t_pose **stackb, int len)
 		twofifty(stacka, stackb, len);
 	if (len > 250 && len <= 505)
 		five_hundred(stacka, stackb, len);
-	else
+	else if (len > 505)
 		sort_time(stacka, stackb, len);
 }
 

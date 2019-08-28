@@ -3,18 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   basic_tests.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:09:42 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/15 16:15:20 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/28 09:16:41 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	oof(void)
+void	oof(int i)
 {
-	ft_putendl("Error");
+	if (i == 0)
+		ft_putendl("Error");
+	else if (i == 1)
+		ft_putendl("Error not a number");
+	else if (i == 2)
+		ft_putendl("Error duplicate");
+	else if (i == 3)
+		ft_putendl("Error is greater than an int");
 	exit(1);
 }
 
@@ -26,7 +33,7 @@ void	is_num(int argc, char **argv)
 	while (j < argc)
 	{
 		if (ft_isnum(argv[j]) == 0)
-			oof();
+			oof(1);
 		j++;
 	}
 }
@@ -48,7 +55,7 @@ void	doubles(int argc, char **argv)
 	while (i < argc - 1)
 	{
 		j = i + 1;
-		while (j < argc)
+		while (j < argc - 1)
 		{
 			if (args[i] == args[j])
 				FREE_OOF;
@@ -77,7 +84,7 @@ void	min_max(int argc, char **argv)
 		if (args[i] > 2147483647 || args[i] < -2147483648)
 		{
 			free(args);
-			oof();
+			oof(3);
 		}
 		i++;
 	}
