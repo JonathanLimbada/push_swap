@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/08 09:46:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/28 08:21:12 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/29 15:19:28 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,6 @@ void	read_time(t_pose **stacka, t_pose **stackb)
 			oof(0);
 		}
 	}
+	print_stack(stacka, 'A');
+	print_stack(stackb, 'B');
 }

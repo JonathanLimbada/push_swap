@@ -6,24 +6,19 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/25 12:06:16 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/26 13:05:34 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/29 15:22:30 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_pose		*listint(int count, int argc, char **argv)
+t_pose		*listint(int argc, char **argv)
 {
 	t_pose	*stacka;
 	t_pose	*node;
 	int		i;
 
-	i = 1;
-	if (argc == 2)
-	{
-		i = 0;
-		argc = count;
-	}
+	i = 0;
 	stacka = makelist(ft_atoi(argv[i]));
 	i++;
 	while (i < argc)

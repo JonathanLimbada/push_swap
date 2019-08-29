@@ -3,30 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   splits.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlimbada <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 12:12:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/15 16:14:30 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/29 16:52:36 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_pose	*split_time(int argc, char **argv)
+t_pose		*split_time(char **argv)
 {
 	t_pose	*stack;
 	char	**arg;
-	int		i;
 
-	i = 0;
-	arg = ft_strsplit(argv[1], ' ');
-	errors(arg_size(arg), argc, arg);
-	stack = listint(arg_size(arg), argc, arg);
+	arg = ft_strsplit(argv[0], ' ');
+	errors(arg_size(arg), arg, 1);
+	stack = listint(arg_size(arg), arg);
 	free_time(arg);
 	return (stack);
 }
 
-int		arg_size(char **arg)
+int			arg_size(char **arg)
 {
 	int		i;
 
@@ -36,4 +34,22 @@ int		arg_size(char **arg)
 		i++;
 	}
 	return (i);
+}
+
+int			flags(int ac, char **av)
+{
+	int		i;
+	int		l;
+
+	i = 1;
+	l = 1;
+	while (i < ac)
+	{
+		if (ft_strequ(av[i], "-c"))
+			l += 1;
+		if (ft_strequ(av[i], "-v"))
+			l += 1;
+		i++;
+	}
+	return (l);
 }

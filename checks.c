@@ -6,27 +6,18 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 12:32:57 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/26 16:21:06 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/29 15:18:38 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void		errors(int count, int argc, char **argv)
+void		errors(int count, char **argv, int check)
 {
-	if (argc == 2)
-	{
-		split_num(count, argv);
-		doubles2(count, argv);
-		min_max2(count, argv);
-	}
-	else
-	{
-		is_num(argc, argv);
-		doubles(argc, argv);
-		min_max(argc, argv);
-	}
+	split_num(count, argv, check);
+	doubles2(count, argv, check);
+	min_max2(count, argv, check);
 }
 
 void		print_stack(t_pose **head, char stack_id)

@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 10:20:51 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/28 09:17:00 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/29 14:39:43 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	free_time(char **argv)
 	free(argv);
 }
 
-void	split_num(int argc, char **argv)
+void	split_num(int argc, char **argv, int check)
 {
 	int	j;
 
@@ -34,14 +34,15 @@ void	split_num(int argc, char **argv)
 	{
 		if (ft_isnum(argv[j]) == 0)
 		{
-			free_time(argv);
+			if (check)
+				free_time(argv);
 			oof(1);
 		}
 		j++;
 	}
 }
 
-void	doubles2(int argc, char **argv)
+void	doubles2(int argc, char **argv, int check)
 {
 	int	i;
 	int	j;
@@ -55,13 +56,13 @@ void	doubles2(int argc, char **argv)
 		i++;
 	}
 	i = 0;
-	while (i < argc)
+	while (i < (argc - 1))
 	{
 		j = i + 1;
-		while (j < argc - 1)
+		while (j < argc)
 		{
 			if (args[i] == args[j])
-				FFREE_OOF;
+				(check == 1) ? (FREE_AV_OOF) : (FREE_OOF);
 			j++;
 		}
 		i++;
@@ -69,7 +70,7 @@ void	doubles2(int argc, char **argv)
 	free(args);
 }
 
-void	min_max2(int argc, char **argv)
+void	min_max2(int argc, char **argv, int check)
 {
 	int		i;
 	long	*args;
@@ -86,7 +87,8 @@ void	min_max2(int argc, char **argv)
 	{
 		if (args[i] > 2147483647 || args[i] < -2147483648)
 		{
-			free_time(argv);
+			if (check)
+				free_time(argv);
 			free(args);
 			oof(3);
 		}
