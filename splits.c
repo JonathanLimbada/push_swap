@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 12:12:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/29 16:52:36 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/30 08:34:29 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,4 @@ int			arg_size(char **arg)
 		i++;
 	}
 	return (i);
-}
-
-int			flags(int ac, char **av)
-{
-	int		i;
-	int		l;
-
-	i = 1;
-	l = 1;
-	while (i < ac)
-	{
-		if (ft_strequ(av[i], "-c"))
-			l += 1;
-		if (ft_strequ(av[i], "-v"))
-			l += 1;
-		i++;
-	}
-	return (l);
 }

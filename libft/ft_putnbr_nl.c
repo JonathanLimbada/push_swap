@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_nl.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 11:01:13 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/30 11:43:22 by jlimbada         ###   ########.fr       */
+/*   Created: 2019/08/30 10:43:23 by jlimbada          #+#    #+#             */
+/*   Updated: 2019/08/30 11:03:06 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int		main(int argc, char **argv)
+/*
+**Outputs the integer n to the standard output followed by a newline.
+*/
+
+void	ft_putnbr_nl(int n)
 {
-	t_pose	*stack_a;
-	t_pose	*stack_b;
+	long	e;
 
-	stack_b = NULL;
-	if (argc < 2)
-		return (0);
-	SHIFT;
-	if (argc == 1)
-		stack_a = split_time(argv);
-	else
+	e = (long)n;
+	if (n < 0)
 	{
-		errors(argc, argv, 0);
-		stack_a = listint(argc, argv);
+		ft_putchar('-');
+		e = e * -1;
 	}
-	if (!(stack_b) && (checks(&stack_a) != 0))
-		return (0);
-	do_pushswap(&stack_a, &stack_b, list_len(&stack_a));
-	FREE_REAL_ESTATE;
-	return (0);
+	if (e >= 10)
+	{
+		ft_putnbr(e / 10);
+		ft_putchar(e % 10 + '0');
+	}
+	else
+		ft_putchar(e + '0');
+    ft_putendl("");
 }

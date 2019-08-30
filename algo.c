@@ -6,7 +6,7 @@
 /*   By: jlimbada <jlimbada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 12:33:05 by jlimbada          #+#    #+#             */
-/*   Updated: 2019/08/27 13:28:53 by jlimbada         ###   ########.fr       */
+/*   Updated: 2019/08/30 11:52:46 by jlimbada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,16 @@ void	five(t_pose **stacka, t_pose **stackb, int len)
 {
 	int	s;
 	int	i;
+	int	e;
 
 	i = 0;
+	e = len;
 	while (i < (len - 3))
 	{
 		s = smallest(stacka);
-		rotate_time(stacka, s, len);
+		rotate_time(stacka, s, e);
 		pb(stacka, stackb, 1);
+		e--;
 		i++;
 	}
 	three(stacka);
